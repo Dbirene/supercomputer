@@ -1,0 +1,30 @@
+首先连接上超级计算机
+touch my_program.cpp 创建c++文件
+rm filename 删除文件
+nano my_program.cpp 打开这个文件并填充代码
+CTRL+O保存 CTRL+X退出
+g++ -std=c++11 -fopenmp my_program.cpp -o my_program 运行文件
+./my_program 展示结果
+mkdir 创建文件夹
+mv file /filename 把file文件放到filename文件夹内
+module avail 展示所有模块
+module load OpenMPI/4.0.0 用这个来运行mpi
+mpic++ -std=c++11 -fopenmp -o task1_mpi task1_mpi.cpp
+
+
+
+vim 创建函数
+两下esc  :wq保存
+g++ -fopenmp -std=c++11 cpp -o yunxingwenjian 
+回车
+possion.lsf 
+两下esc 
+：q保存
+bsub<possion.lsf 提交编译
+bjobs -u -all 看是第几个
+cat my_job.数字 看结果 
+maxpro 4
+max threads12
+runtime 7
+turnaround time 5
+3805
