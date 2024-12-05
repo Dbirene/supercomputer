@@ -2,6 +2,7 @@
 Данный документ содержит инструкции по сборке и запуску программ OpenMP, MPI и OpenMP+MPI на суперкомпьютере IBM Polus.
 
 1. Программа OpenMP (task1/cd.cpp)
+   
 Команды для сборки:
 mkdir task1
 cd task1
@@ -9,8 +10,10 @@ nano cd.cpp
 Скопировать код
 сохранить код ctrl+O enter
 Выйти из редактирования ctrl+X
+
 module load gcc
 g++ -std=c++11 -fopenmp cd.cpp -o openmp
+
 LSF-скрипт задания (nano openmp.lsf):
 #LSBATCH: User input
 #BSUB -n 4
@@ -27,6 +30,7 @@ bsub < openmp.lsf
 ![7923822f9f53ac804c63e41cbd25a4d](https://github.com/user-attachments/assets/921d4e01-29e2-4635-af0c-d4f0562d5ee9)
 
 2. Программа MPI (task2/mpi.cpp)
+   
 Команды для сборки:
 mkdir task2
 cd task2
@@ -34,7 +38,9 @@ nano mpi.cpp
 Скопировать код
 сохранить код ctrl+O enter
 Выйти из редактирования ctrl+X
+
 mpicxx -std=c++11 -fopenmp mpi.cpp -o mpi -lm
+
 LSF-скрипт задания (mpi.lsf):
 #LSBATCH: User input
 #!/bin/bash
@@ -57,6 +63,7 @@ bsub < mpi.lsf
 <img width="449" alt="9b9d460830fd5646d126d39c60e0648" src="https://github.com/user-attachments/assets/39dd95cc-f183-4992-aa8c-9d3d9c0111d9">
 
 3. Программа OpenMP+MPI (task3/openmp_mpi.cpp)
+   
 Команды для сборки:
 mkdir task3
 cd task3
@@ -64,6 +71,7 @@ nano openmp_mpi.cpp
 Скопировать код
 сохранить код ctrl+O enter
 Выйти из редактирования ctrl+X
+
 LSF-скрипт задания (openmp_mpi.lsf):
 #LSBATCH: User input
 #!/bin/bash
